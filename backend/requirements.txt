@@ -8,10 +8,8 @@ python-multipart
 pydantic[email]
 scikit-learn
 pandas
-spacy
 python-dotenv
 alembic
-pytest
 httpx
 google-auth
 google-auth-oauthlib

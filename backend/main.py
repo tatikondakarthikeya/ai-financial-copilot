@@ -49,3 +49,8 @@ app.include_router(google_auth.router)
 @app.get("/")
 def root():
     return {"message": "AI Financial Copilot API Running"}
+
+
+@app.get("/healthz")
+def health():
+    return {"status": "ok"}
