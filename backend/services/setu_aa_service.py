@@ -23,15 +23,18 @@ SETU_CLIENT_SECRET = os.getenv("SETU_CLIENT_SECRET")
 SETU_PRODUCT_INSTANCE_ID = os.getenv("SETU_PRODUCT_INSTANCE_ID")
 FRONTEND_URL = os.getenv("FRONTEND_URL", "http://localhost:3000")
 
-# Sandbox URLs
-TOKEN_URL = "https://uat.setu.co/api/v2/auth/token"
+# Sandbox URLs — try multiple in case one is blocked by region
+TOKEN_URLS = [
+    "https://uat.setu.co/api/v2/auth/token",
+    "https://uat.setu.co/auth/token",
+]
 FIU_BASE_URL = "https://fiu-sandbox.setu.co/v2"
 
 _token_cache = {"token": None, "expires_at": 0}
 
 
 def _get_token() -> str:
-    """Get OAuth token, using cache if valid."""
+    """Get OAuth token, using cache if valid. Tries multiple endpoints."""
     now = time.time()
     if _token_cache["token"] and _token_cache["expires_at"] > now + 60:
         return _token_cache["token"]
@@ -39,22 +42,27 @@ def _get_token() -> str:
     if not SETU_CLIENT_ID or not SETU_CLIENT_SECRET:
         raise Exception("Setu credentials not configured")
 
-    resp = requests.post(
-        TOKEN_URL,
-        json={
-            "clientID": SETU_CLIENT_ID,
-            "grant_type": "client_credentials",
-            "secret": SETU_CLIENT_SECRET,
-        },
-        timeout=10,
-    )
-    resp.raise_for_status()
-    data = resp.json()["data"]
+    payload = {
+        "clientID": SETU_CLIENT_ID,
+        "grant_type": "client_credentials",
+        "secret": SETU_CLIENT_SECRET,
+    }
 
-    _token_cache["token"] = data["token"]
-    _token_cache["expires_at"] = now + data.get("expiresIn", 1800)
+    last_error = None
+    for url in TOKEN_URLS:
+        try:
+            resp = requests.post(url, json=payload, timeout=15)
+            resp.raise_for_status()
+            data = resp.json()["data"]
+            _token_cache["token"] = data["token"]
+            _token_cache["expires_at"] = now + data.get("expiresIn", 1800)
+            return data["token"]
+        except Exception as e:
+            last_error = e
+            print(f"Setu token failed at {url}: {e}")
+            continue
 
-    return data["token"]
+    raise Exception(f"All Setu token endpoints failed. Last error: {last_error}")
 
 
 def _headers() -> dict:
