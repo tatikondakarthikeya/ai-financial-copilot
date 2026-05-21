@@ -12,6 +12,7 @@ import CategoryBreakdown from '@/components/dashboard/CategoryBreakdown'
 import RecentTransactions from '@/components/dashboard/RecentTransactions'
 import GmailIntegration from '@/components/dashboard/GmailIntegration'
 import BankStatementUpload from '@/components/dashboard/BankStatementUpload'
+import LinkBankAccount from '@/components/dashboard/LinkBankAccount'
 
 import { Plus, Sparkles, X, AlertCircle } from 'lucide-react'
 
@@ -191,6 +192,8 @@ export default function Dashboard() {
           >
             <Plus size={18} /> Add Transaction
           </button>
+
+          <LinkBankAccount onLinkSuccess={loadData} />
 
           <BankStatementUpload onUploadSuccess={loadData} />
 

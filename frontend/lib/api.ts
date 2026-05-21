@@ -72,6 +72,15 @@ export const aiApi = {
   query: (query: string) => api.post('/ai/query', { query }),
 };
 
+export const setuApi = {
+  createConsent: (mobile_number: string) =>
+    api.post('/setu/create-consent', { mobile_number }),
+  checkStatus: (consentId: string) =>
+    api.get(`/setu/consent-status/${consentId}`),
+  fetchData: (consentId: string) =>
+    api.post(`/setu/fetch-data/${consentId}`),
+};
+
 export const analyticsApi = {
   getSummary: () => api.get('/analytics/summary'),
   getInsights: () => api.get('/analytics/insights'),
