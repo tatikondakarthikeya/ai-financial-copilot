@@ -17,7 +17,7 @@ router = APIRouter(prefix="/auth/google", tags=["Google OAuth"])
 CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
 CLIENT_SECRET = os.getenv("GOOGLE_CLIENT_SECRET")
 
-REDIRECT_URI = "http://localhost:8000/auth/google/callback"
+REDIRECT_URI = os.getenv("GOOGLE_REDIRECT_URI", "http://localhost:8000/auth/google/callback")
 SCOPE = "https://www.googleapis.com/auth/gmail.readonly"
 
 
@@ -110,7 +110,8 @@ async def google_callback(
 
     db.commit()
 
-    return RedirectResponse("http://localhost:3000/?google_connected=true")
+    frontend_url = os.getenv("FRONTEND_URL", "http://localhost:3000")
+    return RedirectResponse(f"{frontend_url}/?google_connected=true")
 
 
 @router.get("/status")
