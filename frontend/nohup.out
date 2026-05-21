@@ -1,0 +1,752 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.3:3000
+
+✓ Starting...
+✓ Ready in 589ms
+ GET / 200 in 768ms (compile: 614ms, render: 154ms)
+ GET /login 200 in 41ms (compile: 30ms, render: 12ms)
+ GET / 200 in 14ms (compile: 4ms, render: 10ms)
+ GET /login 200 in 10ms (compile: 1757µs, render: 8ms)
+ GET /login 200 in 10ms (compile: 2ms, render: 8ms)
+ GET /register 200 in 61ms (compile: 53ms, render: 8ms)
+ GET /login?registered=true 200 in 8ms (compile: 2ms, render: 6ms)
+ GET / 200 in 12ms (compile: 6ms, render: 6ms)
+ GET /login 200 in 11ms (compile: 3ms, render: 8ms)
+ GET / 200 in 109ms (compile: 19ms, render: 90ms)
+ GET /login 200 in 10ms (compile: 3ms, render: 8ms)
+ GET /register 200 in 26ms (compile: 9ms, render: 17ms)
+ GET /login 200 in 25ms (compile: 7ms, render: 18ms)
+ GET / 200 in 8ms (compile: 2ms, render: 6ms)
+ GET /login 200 in 9ms (compile: 1535µs, render: 8ms)
+ GET /login 200 in 9ms (compile: 1224µs, render: 7ms)
+ GET /login 200 in 109ms (compile: 7ms, render: 101ms)
+ GET / 200 in 8ms (compile: 1942µs, render: 6ms)
+ GET /login 200 in 9ms (compile: 1799µs, render: 7ms)
+ GET /login 200 in 8ms (compile: 1051µs, render: 7ms)
+ GET /register 200 in 28ms (compile: 11ms, render: 18ms)
+ GET /login?registered=true 200 in 9ms (compile: 3ms, render: 6ms)
+ GET / 200 in 7ms (compile: 1000µs, render: 6ms)
+ GET /login 200 in 10ms (compile: 1391µs, render: 9ms)
+✓ Compiled in 107ms
+✓ Compiled in 183ms
+✓ Compiled in 14ms
+ GET / 200 in 278ms (compile: 87ms, render: 191ms)
+ GET /login 200 in 135ms (compile: 45ms, render: 90ms)
+ GET / 200 in 12ms (compile: 3ms, render: 9ms)
+ GET / 200 in 64ms (compile: 14ms, render: 50ms)
+ GET /login 200 in 23ms (compile: 5ms, render: 18ms)
+ GET /register 200 in 95ms (compile: 83ms, render: 12ms)
+ GET /login 200 in 25ms (compile: 7ms, render: 18ms)
+ GET / 200 in 8ms (compile: 3ms, render: 5ms)
+✓ Compiled in 99ms
+ GET / 200 in 37ms (compile: 4ms, render: 33ms)
+ GET /login 200 in 34ms (compile: 10ms, render: 24ms)
+ GET /login 200 in 19ms (compile: 3ms, render: 15ms)
+ GET / 200 in 6ms (compile: 1222µs, render: 5ms)
+
+> frontend@0.1.0 dev
+> next dev
+
+⚠ Port 3000 is in use by process 65134, using available port 3001 instead.
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://172.20.10.2:3001
+
+✓ Starting...
+⨯ Unable to acquire lock at /Users/karthikeya/.gemini/antigravity/scratch/financial-copilot/frontend/.next/dev/lock, is another instance of next dev running?
+  Suggestion: If you intended to restart next dev, terminate the other process, and then try again.
+[?25h
+ GET / 200 in 24ms (compile: 3ms, render: 21ms)
+✓ Compiled in 15ms
+ GET / 200 in 244ms (compile: 85ms, render: 159ms)
+ GET / 200 in 34ms (compile: 6ms, render: 28ms)
+ GET / 200 in 35ms (compile: 5ms, render: 31ms)
+ GET / 200 in 38ms (compile: 3ms, render: 34ms)
+ GET / 200 in 33ms (compile: 6ms, render: 27ms)
+✓ Compiled in 45ms
+✓ Compiled in 21ms
+ GET / 200 in 287ms (compile: 87ms, render: 200ms)
+ GET /login 200 in 109ms (compile: 50ms, render: 60ms)
+ GET /login 200 in 15ms (compile: 823µs, render: 14ms)
+ GET /login 200 in 39ms (compile: 7ms, render: 32ms)
+ GET /login 200 in 32ms (compile: 1681µs, render: 30ms)
+ GET /login 200 in 35ms (compile: 3ms, render: 32ms)
+ GET / 200 in 9ms (compile: 1989µs, render: 7ms)
+ GET / 200 in 95ms (compile: 10ms, render: 85ms)
+ GET / 200 in 36ms (compile: 5ms, render: 31ms)
+ GET / 200 in 48ms (compile: 20ms, render: 28ms)
+ GET /login 200 in 55ms (compile: 1406µs, render: 54ms)
+ GET / 200 in 6ms (compile: 1156µs, render: 5ms)
+✓ Compiled in 81ms
+ GET /login 200 in 42ms (compile: 3ms, render: 39ms)
+✓ Compiled in 37ms
+⨯ ./app/page.tsx:403:7
+Parsing ecmascript source code failed
+[0m [90m 401 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 402 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 403 |[39m       {[90m/* Manage Subscription Modal */[39m}
+ [90m     |[39m       [31m[1m^[22m[39m
+ [90m 404 |[39m       {selectedSub [33m&&[39m (
+ [90m 405 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"[39m[33m>[39m
+ [90m 406 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"bg-slate-900 border border-slate-700 rounded-2xl p-6 w-full max-w-md shadow-2xl"[39m[33m>[39m[0m
+
+Expected '</', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+ GET / 500 in 657ms (compile: 596ms, render: 60ms)
+⨯ ./app/page.tsx:403:7
+Parsing ecmascript source code failed
+[0m [90m 401 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 402 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 403 |[39m       {[90m/* Manage Subscription Modal */[39m}
+ [90m     |[39m       [31m[1m^[22m[39m
+ [90m 404 |[39m       {selectedSub [33m&&[39m (
+ [90m 405 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"[39m[33m>[39m
+ [90m 406 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"bg-slate-900 border border-slate-700 rounded-2xl p-6 w-full max-w-md shadow-2xl"[39m[33m>[39m[0m
+
+Expected '</', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+ GET / 500 in 32ms (compile: 23ms, render: 9ms)
+ GET /login 200 in 50ms (compile: 6ms, render: 44ms)
+⨯ ./app/page.tsx:403:7
+Parsing ecmascript source code failed
+[0m [90m 401 |[39m           [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+ [90m 402 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 403 |[39m       {[90m/* Manage Subscription Modal */[39m}
+ [90m     |[39m       [31m[1m^[22m[39m
+ [90m 404 |[39m       {selectedSub [33m&&[39m (
+ [90m 405 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"[39m[33m>[39m
+ [90m 406 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"bg-slate-900 border border-slate-700 rounded-2xl p-6 w-full max-w-md shadow-2xl"[39m[33m>[39m[0m
+
+Expected '</', got '{'
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+ GET / 500 in 39ms (compile: 29ms, render: 10ms)
+ GET /dashboard 404 in 802ms (compile: 717ms, render: 84ms)
+ GET /login 200 in 71ms (compile: 18ms, render: 54ms)
+✓ Compiled in 40ms
+ GET /login 200 in 57ms (compile: 10ms, render: 46ms)
+ GET /login 200 in 57ms (compile: 12ms, render: 46ms)
+ GET /login 200 in 75ms (compile: 8ms, render: 67ms)
+ GET /login 200 in 72ms (compile: 4ms, render: 68ms)
+⨯ ./app/page.tsx:402:8
+Parsing ecmascript source code failed
+[0m [90m 400 |[39m             [33m<[39m[33m/[39m[33mform[39m[33m>[39m
+ [90m 401 |[39m         [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m
+[31m[1m>[22m[39m[90m 402 |[39m       )}
+ [90m     |[39m        [31m[1m^[22m[39m
+ [90m 403 |[39m       {[90m/* Manage Subscription Modal */[39m}
+ [90m 404 |[39m       {selectedSub [33m&&[39m (
+ [90m 405 |[39m         [33m<[39m[33mdiv[39m className[33m=[39m[32m"fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4"[39m[33m>[39m[0m
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+ GET / 500 in 134ms (compile: 111ms, render: 23ms)
+⚠ Fast Refresh had to perform a full reload due to a runtime error.
+✓ Compiled in 115ms
+ GET /login 200 in 391ms (compile: 19ms, render: 373ms)
+ GET /login 200 in 57ms (compile: 4ms, render: 53ms)
+ GET / 200 in 368ms (compile: 73ms, render: 294ms)
+ GET /login 200 in 41ms (compile: 3ms, render: 38ms)
+ GET /login 200 in 32ms (compile: 4ms, render: 28ms)
+ GET / 200 in 12ms (compile: 4ms, render: 8ms)
+✓ Compiled in 212ms
+✓ Compiled in 29ms
+✓ Compiled in 665ms
+ GET / 200 in 456ms (compile: 309ms, render: 147ms)
+ GET / 200 in 51ms (compile: 4ms, render: 47ms)
+ GET / 200 in 705ms (compile: 387ms, render: 318ms)
+ GET /login 200 in 739ms (compile: 421ms, render: 319ms)
+ GET /login 200 in 576ms (compile: 113ms, render: 462ms)
+ GET /login 200 in 95ms (compile: 3ms, render: 92ms)
+ GET /login 200 in 42ms (compile: 9ms, render: 33ms)
+ GET / 200 in 160ms (compile: 1698µs, render: 159ms)
+ GET /login 200 in 136ms (compile: 6ms, render: 130ms)
+ GET /login 200 in 114ms (compile: 4ms, render: 110ms)
+ GET /login 200 in 28ms (compile: 1257µs, render: 26ms)
+✓ Compiled in 34ms
+✓ Compiled in 34ms
+✓ Compiled in 31ms
+✓ Compiled in 76ms
+✓ Compiled in 32ms
+✓ Compiled in 27ms
+✓ Compiled in 398ms
+✓ Compiled in 62ms
+ GET /login 200 in 155ms (compile: 30ms, render: 125ms)
+ GET /login 200 in 66ms (compile: 1509µs, render: 64ms)
+ GET /login 200 in 48ms (compile: 1751µs, render: 46ms)
+ GET /login 200 in 38ms (compile: 2ms, render: 35ms)
+✓ Compiled in 108ms
+ GET /login 200 in 128ms (compile: 74ms, render: 53ms)
+ GET /login 200 in 93ms (compile: 1026µs, render: 92ms)
+ GET /login 200 in 94ms (compile: 3ms, render: 91ms)
+ GET /login 200 in 93ms (compile: 4ms, render: 89ms)
+ GET /login 200 in 77ms (compile: 1611µs, render: 76ms)
+ GET /login 200 in 91ms (compile: 1092µs, render: 90ms)
+ GET /login 200 in 90ms (compile: 5ms, render: 85ms)
+ GET /login 200 in 85ms (compile: 1500µs, render: 83ms)
+ GET /login 200 in 73ms (compile: 5ms, render: 68ms)
+ GET /login 200 in 71ms (compile: 3ms, render: 68ms)
+ GET /login 200 in 72ms (compile: 2ms, render: 70ms)
+ GET /login 200 in 67ms (compile: 3ms, render: 64ms)
+ GET /login 200 in 48ms (compile: 3ms, render: 45ms)
+ GET /login 200 in 43ms (compile: 1843µs, render: 42ms)
+ GET /login 200 in 46ms (compile: 1755µs, render: 44ms)
+ GET /login 200 in 46ms (compile: 2ms, render: 43ms)
+ GET /login 200 in 45ms (compile: 3ms, render: 42ms)
+ GET /login 200 in 47ms (compile: 1215µs, render: 46ms)
+ GET /login 200 in 48ms (compile: 1362µs, render: 46ms)
+ GET /login 200 in 36ms (compile: 1488µs, render: 35ms)
+ GET /login 200 in 38ms (compile: 3ms, render: 36ms)
+ GET /login 200 in 45ms (compile: 1544µs, render: 44ms)
+ GET /login 200 in 48ms (compile: 2ms, render: 46ms)
+ GET /login 200 in 52ms (compile: 2ms, render: 49ms)
+ GET /login 200 in 50ms (compile: 1388µs, render: 49ms)
+ GET /login 200 in 52ms (compile: 1402µs, render: 51ms)
+ GET /login 200 in 49ms (compile: 1682µs, render: 47ms)
+ GET /login 200 in 48ms (compile: 1162µs, render: 46ms)
+ GET /login 200 in 50ms (compile: 3ms, render: 47ms)
+ GET /login 200 in 52ms (compile: 1300µs, render: 51ms)
+ GET /login 200 in 50ms (compile: 1643µs, render: 48ms)
+ GET /login 200 in 56ms (compile: 1493µs, render: 54ms)
+ GET /login 200 in 54ms (compile: 1740µs, render: 52ms)
+ GET /login 200 in 55ms (compile: 2ms, render: 53ms)
+ GET /login 200 in 53ms (compile: 1823µs, render: 51ms)
+ GET /login 200 in 46ms (compile: 1717µs, render: 44ms)
+ GET /login 200 in 44ms (compile: 1980µs, render: 42ms)
+ GET /login 200 in 37ms (compile: 1072µs, render: 36ms)
+ GET /login 200 in 40ms (compile: 1498µs, render: 38ms)
+ GET /login 200 in 38ms (compile: 1166µs, render: 37ms)
+ GET /login 200 in 36ms (compile: 1136µs, render: 35ms)
+ GET /login 200 in 36ms (compile: 1154µs, render: 35ms)
+ GET /login 200 in 34ms (compile: 1120µs, render: 33ms)
+ GET /login 200 in 36ms (compile: 1016µs, render: 35ms)
+ GET /login 200 in 36ms (compile: 1131µs, render: 35ms)
+ GET /login 200 in 29ms (compile: 1425µs, render: 28ms)
+ GET /login 200 in 21ms (compile: 958µs, render: 20ms)
+ GET /login 200 in 11ms (compile: 1241µs, render: 10ms)
+✓ Compiled in 44ms
+ GET /login 200 in 98ms (compile: 33ms, render: 64ms)
+ GET /login 200 in 77ms (compile: 3ms, render: 74ms)
+ GET /login 200 in 80ms (compile: 1018µs, render: 79ms)
+ GET /login 200 in 82ms (compile: 2ms, render: 80ms)
+ GET /login 200 in 63ms (compile: 1862µs, render: 61ms)
+ GET /login 200 in 58ms (compile: 3ms, render: 55ms)
+ GET /login 200 in 47ms (compile: 1682µs, render: 45ms)
+ GET /login 200 in 45ms (compile: 1490µs, render: 43ms)
+ GET /login 200 in 61ms (compile: 3ms, render: 58ms)
+ GET /login 200 in 42ms (compile: 3ms, render: 40ms)
+ GET /login 200 in 60ms (compile: 1543µs, render: 58ms)
+ GET /login 200 in 56ms (compile: 2ms, render: 54ms)
+ GET /login 200 in 58ms (compile: 2ms, render: 56ms)
+ GET /login 200 in 52ms (compile: 1901µs, render: 50ms)
+ GET /login 200 in 45ms (compile: 1745µs, render: 43ms)
+ GET /login 200 in 42ms (compile: 3ms, render: 39ms)
+ GET /login 200 in 34ms (compile: 987µs, render: 33ms)
+ GET /login 200 in 36ms (compile: 1032µs, render: 35ms)
+ GET /login 200 in 29ms (compile: 1097µs, render: 28ms)
+ GET /login 200 in 28ms (compile: 1091µs, render: 27ms)
+ GET /login 200 in 34ms (compile: 1088µs, render: 33ms)
+ GET /login 200 in 24ms (compile: 1010µs, render: 23ms)
+ GET /login 200 in 36ms (compile: 1577µs, render: 34ms)
+ GET /login 200 in 40ms (compile: 796µs, render: 39ms)
+ GET /login 200 in 41ms (compile: 1083µs, render: 40ms)
+ GET /login 200 in 45ms (compile: 1485µs, render: 43ms)
+ GET /login 200 in 42ms (compile: 1242µs, render: 41ms)
+ GET /login 200 in 33ms (compile: 1159µs, render: 31ms)
+ GET /login 200 in 41ms (compile: 3ms, render: 38ms)
+ GET /login 200 in 39ms (compile: 1249µs, render: 38ms)
+ GET /login 200 in 46ms (compile: 1582µs, render: 44ms)
+ GET /login 200 in 47ms (compile: 1100µs, render: 46ms)
+ GET /login 200 in 46ms (compile: 1236µs, render: 44ms)
+ GET /login 200 in 51ms (compile: 2ms, render: 49ms)
+ GET /login 200 in 43ms (compile: 1969µs, render: 41ms)
+ GET /login 200 in 46ms (compile: 1089µs, render: 45ms)
+ GET /login 200 in 49ms (compile: 2ms, render: 47ms)
+ GET /login 200 in 38ms (compile: 1106µs, render: 37ms)
+ GET /login 200 in 40ms (compile: 1719µs, render: 39ms)
+ GET /login 200 in 47ms (compile: 1329µs, render: 45ms)
+ GET /login 200 in 34ms (compile: 3ms, render: 32ms)
+ GET /login 200 in 33ms (compile: 1912µs, render: 32ms)
+ GET /login 200 in 35ms (compile: 1195µs, render: 34ms)
+ GET /login 200 in 35ms (compile: 1761µs, render: 33ms)
+ GET /login 200 in 45ms (compile: 1922µs, render: 43ms)
+ GET /login 200 in 48ms (compile: 3ms, render: 45ms)
+ GET /login 200 in 49ms (compile: 1718µs, render: 47ms)
+ GET /login 200 in 41ms (compile: 1287µs, render: 40ms)
+ GET /login 200 in 37ms (compile: 3ms, render: 35ms)
+ GET /login 200 in 40ms (compile: 1240µs, render: 38ms)
+ GET /login 200 in 37ms (compile: 1792µs, render: 35ms)
+ GET /login 200 in 37ms (compile: 1721µs, render: 36ms)
+ GET /login 200 in 37ms (compile: 895µs, render: 36ms)
+ GET /login 200 in 29ms (compile: 1114µs, render: 28ms)
+ GET /login 200 in 22ms (compile: 1303µs, render: 20ms)
+ GET /login 200 in 11ms (compile: 1064µs, render: 10ms)
+✓ Compiled in 2ms
+ GET /login 200 in 103ms (compile: 72ms, render: 31ms)
+ GET /login 200 in 25ms (compile: 1069µs, render: 24ms)
+ GET /login 200 in 44ms (compile: 693µs, render: 43ms)
+ GET /login 200 in 50ms (compile: 895µs, render: 49ms)
+ GET /login 200 in 50ms (compile: 2ms, render: 48ms)
+ GET /login 200 in 49ms (compile: 4ms, render: 45ms)
+ GET /login 200 in 47ms (compile: 2ms, render: 44ms)
+ GET /login 200 in 68ms (compile: 1537µs, render: 66ms)
+ GET /login 200 in 66ms (compile: 2ms, render: 64ms)
+ GET /login 200 in 64ms (compile: 1200µs, render: 62ms)
+ GET /login 200 in 50ms (compile: 4ms, render: 45ms)
+ GET /login 200 in 31ms (compile: 1202µs, render: 29ms)
+ GET /login 200 in 30ms (compile: 1023µs, render: 29ms)
+ GET /login 200 in 30ms (compile: 956µs, render: 29ms)
+ GET /login 200 in 24ms (compile: 912µs, render: 23ms)
+ GET /login 200 in 32ms (compile: 943µs, render: 31ms)
+ GET /login 200 in 33ms (compile: 1009µs, render: 32ms)
+ GET /login 200 in 32ms (compile: 1322µs, render: 31ms)
+ GET /login 200 in 31ms (compile: 1031µs, render: 30ms)
+ GET /login 200 in 32ms (compile: 1012µs, render: 31ms)
+ GET /login 200 in 32ms (compile: 1001µs, render: 31ms)
+ GET /login 200 in 32ms (compile: 936µs, render: 31ms)
+ GET /login 200 in 32ms (compile: 1126µs, render: 31ms)
+ GET /login 200 in 30ms (compile: 949µs, render: 29ms)
+ GET /login 200 in 31ms (compile: 943µs, render: 30ms)
+ GET /login 200 in 39ms (compile: 978µs, render: 38ms)
+ GET /login 200 in 33ms (compile: 1007µs, render: 32ms)
+ GET /login 200 in 54ms (compile: 1059µs, render: 53ms)
+ GET /login 200 in 46ms (compile: 1881µs, render: 45ms)
+ GET /login 200 in 45ms (compile: 2ms, render: 43ms)
+ GET /login 200 in 49ms (compile: 3ms, render: 46ms)
+ GET /login 200 in 35ms (compile: 2ms, render: 33ms)
+ GET /login 200 in 50ms (compile: 2ms, render: 48ms)
+ GET /login 200 in 42ms (compile: 1052µs, render: 41ms)
+ GET /login 200 in 51ms (compile: 1647µs, render: 49ms)
+ GET /login 200 in 46ms (compile: 1614µs, render: 44ms)
+ GET /login 200 in 44ms (compile: 1732µs, render: 43ms)
+ GET /login 200 in 39ms (compile: 1449µs, render: 38ms)
+ GET /login 200 in 38ms (compile: 1223µs, render: 37ms)
+ GET /login 200 in 54ms (compile: 1671µs, render: 53ms)
+ GET /login 200 in 44ms (compile: 2ms, render: 42ms)
+ GET /login 200 in 44ms (compile: 3ms, render: 41ms)
+ GET /login 200 in 47ms (compile: 1537µs, render: 46ms)
+ GET /login 200 in 31ms (compile: 1696µs, render: 30ms)
+ GET /login 200 in 39ms (compile: 1577µs, render: 38ms)
+ GET /login 200 in 42ms (compile: 2ms, render: 40ms)
+ GET /login 200 in 42ms (compile: 1401µs, render: 41ms)
+ GET /login 200 in 48ms (compile: 1770µs, render: 46ms)
+ GET /login 200 in 50ms (compile: 2ms, render: 47ms)
+ GET /login 200 in 42ms (compile: 1229µs, render: 40ms)
+ GET /login 200 in 50ms (compile: 1355µs, render: 49ms)
+ GET /login 200 in 56ms (compile: 1924µs, render: 54ms)
+ GET /login 200 in 59ms (compile: 2ms, render: 56ms)
+ GET /login 200 in 50ms (compile: 3ms, render: 47ms)
+ GET /login 200 in 47ms (compile: 3ms, render: 44ms)
+ GET /login 200 in 47ms (compile: 1892µs, render: 45ms)
+ GET /login 200 in 45ms (compile: 1589µs, render: 43ms)
+ GET /login 200 in 43ms (compile: 1029µs, render: 42ms)
+ GET /login 200 in 46ms (compile: 1235µs, render: 45ms)
+ GET /login 200 in 42ms (compile: 1335µs, render: 41ms)
+ GET /login 200 in 40ms (compile: 1643µs, render: 38ms)
+ GET /login 200 in 31ms (compile: 1601µs, render: 30ms)
+ GET /login 200 in 23ms (compile: 999µs, render: 22ms)
+ GET /login 200 in 15ms (compile: 1219µs, render: 14ms)
+✓ Compiled in 3ms
+✓ Compiled in 60ms
+ GET /login 200 in 85ms (compile: 33ms, render: 53ms)
+ GET /login 200 in 55ms (compile: 1891µs, render: 53ms)
+ GET /login 200 in 56ms (compile: 1688µs, render: 55ms)
+ GET /login 200 in 68ms (compile: 1346µs, render: 67ms)
+ GET /login 200 in 53ms (compile: 3ms, render: 51ms)
+ GET /login 200 in 62ms (compile: 1522µs, render: 60ms)
+ GET /login 200 in 61ms (compile: 4ms, render: 56ms)
+ GET /login 200 in 49ms (compile: 2ms, render: 47ms)
+ GET /login 200 in 44ms (compile: 1593µs, render: 42ms)
+ GET /login 200 in 39ms (compile: 1426µs, render: 37ms)
+ GET /login 200 in 31ms (compile: 1101µs, render: 30ms)
+ GET /login 200 in 30ms (compile: 1456µs, render: 29ms)
+ GET /login 200 in 41ms (compile: 1221µs, render: 39ms)
+ GET /login 200 in 44ms (compile: 1747µs, render: 42ms)
+ GET /login 200 in 37ms (compile: 1728µs, render: 35ms)
+ GET /login 200 in 52ms (compile: 1263µs, render: 51ms)
+ GET /login 200 in 71ms (compile: 4ms, render: 66ms)
+ GET /login 200 in 66ms (compile: 1455µs, render: 64ms)
+ GET /login 200 in 63ms (compile: 1877µs, render: 61ms)
+ GET /login 200 in 57ms (compile: 1966µs, render: 55ms)
+ GET /login 200 in 35ms (compile: 1582µs, render: 34ms)
+ GET /login 200 in 37ms (compile: 1104µs, render: 36ms)
+ GET /login 200 in 40ms (compile: 1437µs, render: 38ms)
+ GET /login 200 in 39ms (compile: 1016µs, render: 38ms)
+ GET /login 200 in 41ms (compile: 1347µs, render: 40ms)
+ GET /login 200 in 38ms (compile: 1229µs, render: 37ms)
+ GET /login 200 in 37ms (compile: 961µs, render: 36ms)
+ GET /login 200 in 38ms (compile: 1127µs, render: 37ms)
+ GET /login 200 in 37ms (compile: 1145µs, render: 36ms)
+ GET /login 200 in 39ms (compile: 2ms, render: 37ms)
+ GET /login 200 in 32ms (compile: 1081µs, render: 31ms)
+ GET /login 200 in 34ms (compile: 1264µs, render: 33ms)
+ GET /login 200 in 34ms (compile: 1975µs, render: 32ms)
+ GET /login 200 in 44ms (compile: 3ms, render: 41ms)
+ GET /login 200 in 43ms (compile: 1834µs, render: 41ms)
+ GET /login 200 in 36ms (compile: 1565µs, render: 35ms)
+ GET /login 200 in 37ms (compile: 1120µs, render: 36ms)
+ GET /login 200 in 49ms (compile: 1370µs, render: 48ms)
+ GET /login 200 in 41ms (compile: 3ms, render: 38ms)
+ GET /login 200 in 39ms (compile: 2ms, render: 36ms)
+ GET /login 200 in 36ms (compile: 1258µs, render: 35ms)
+ GET /login 200 in 42ms (compile: 3ms, render: 40ms)
+ GET /login 200 in 47ms (compile: 3ms, render: 44ms)
+ GET /login 200 in 46ms (compile: 1938µs, render: 44ms)
+ GET /login 200 in 37ms (compile: 1278µs, render: 35ms)
+ GET /login 200 in 42ms (compile: 1561µs, render: 41ms)
+ GET /login 200 in 35ms (compile: 1191µs, render: 33ms)
+ GET /login 200 in 35ms (compile: 1464µs, render: 33ms)
+ GET /login 200 in 28ms (compile: 1557µs, render: 27ms)
+ GET /login 200 in 27ms (compile: 966µs, render: 26ms)
+ GET /login 200 in 32ms (compile: 1377µs, render: 31ms)
+ GET /login 200 in 33ms (compile: 1361µs, render: 31ms)
+ GET /login 200 in 33ms (compile: 1602µs, render: 31ms)
+ GET /login 200 in 33ms (compile: 901µs, render: 32ms)
+ GET /login 200 in 34ms (compile: 1179µs, render: 33ms)
+ GET /login 200 in 36ms (compile: 941µs, render: 35ms)
+ GET /login 200 in 36ms (compile: 1043µs, render: 35ms)
+ GET /login 200 in 36ms (compile: 867µs, render: 35ms)
+ GET /login 200 in 35ms (compile: 1186µs, render: 34ms)
+ GET /login 200 in 34ms (compile: 1097µs, render: 33ms)
+ GET /login 200 in 35ms (compile: 1016µs, render: 34ms)
+ GET /login 200 in 35ms (compile: 941µs, render: 34ms)
+ GET /login 200 in 36ms (compile: 1046µs, render: 35ms)
+ GET /login 200 in 43ms (compile: 2ms, render: 41ms)
+ GET /login 200 in 40ms (compile: 984µs, render: 39ms)
+ GET /login 200 in 41ms (compile: 1533µs, render: 39ms)
+ GET /login 200 in 41ms (compile: 866µs, render: 40ms)
+ GET /login 200 in 34ms (compile: 1123µs, render: 33ms)
+ GET /login 200 in 35ms (compile: 1443µs, render: 34ms)
+ GET /login 200 in 28ms (compile: 958µs, render: 27ms)
+ GET /login 200 in 20ms (compile: 1370µs, render: 19ms)
+ GET /login 200 in 13ms (compile: 1090µs, render: 12ms)
+✓ Compiled in 92ms
+✓ Compiled in 30ms
+ GET / 200 in 96ms (compile: 83ms, render: 13ms)
+⨯ ./app/history/page.tsx:4:1
+Export transactionsApi doesn't exist in target module
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useState[33m,[39m useEffect } [36mfrom[39m [32m'react'[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { transactionsApi } [36mfrom[39m [32m'@/lib/api'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mDashboardHeader[39m [36mfrom[39m [32m'@/components/dashboard/DashboardHeader'[39m
+ [90m 6 |[39m [36mimport[39m { [33mSearch[39m[33m,[39m [33mFilter[39m[33m,[39m [33mArrowUpDown[39m[33m,[39m [33mChevronLeft[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mCar[39m[33m,[39m [33mUtensils[39m[33m,[39m [33mShoppingBag[39m[33m,[39m [33mRepeat[39m[33m,[39m [33mLink[39m [36mas[39m [33mLinkIcon[39m[33m,[39m [33mMoreHorizontal[39m } [36mfrom[39m [32m'lucide-react'[39m
+ [90m 7 |[39m[0m
+
+The export transactionsApi was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import transactionApi?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/history/page.tsx [Client Component Browser]
+    ./app/history/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/history/page.tsx [Client Component SSR]
+    ./app/history/page.tsx [Server Component]
+
+
+
+./app/history/page.tsx:4:1
+Export transactionsApi doesn't exist in target module
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useState[33m,[39m useEffect } [36mfrom[39m [32m'react'[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { transactionsApi } [36mfrom[39m [32m'@/lib/api'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mDashboardHeader[39m [36mfrom[39m [32m'@/components/dashboard/DashboardHeader'[39m
+ [90m 6 |[39m [36mimport[39m { [33mSearch[39m[33m,[39m [33mFilter[39m[33m,[39m [33mArrowUpDown[39m[33m,[39m [33mChevronLeft[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mCar[39m[33m,[39m [33mUtensils[39m[33m,[39m [33mShoppingBag[39m[33m,[39m [33mRepeat[39m[33m,[39m [33mLink[39m [36mas[39m [33mLinkIcon[39m[33m,[39m [33mMoreHorizontal[39m } [36mfrom[39m [32m'lucide-react'[39m
+ [90m 7 |[39m[0m
+
+The export transactionsApi was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import transactionApi?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/history/page.tsx [Client Component Browser]
+    ./app/history/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/history/page.tsx [Client Component SSR]
+    ./app/history/page.tsx [Server Component]
+
+
+ GET /history 500 in 276ms (compile: 242ms, render: 34ms)
+⨯ ./app/history/page.tsx:4:1
+Export transactionsApi doesn't exist in target module
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useState[33m,[39m useEffect } [36mfrom[39m [32m'react'[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { transactionsApi } [36mfrom[39m [32m'@/lib/api'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mDashboardHeader[39m [36mfrom[39m [32m'@/components/dashboard/DashboardHeader'[39m
+ [90m 6 |[39m [36mimport[39m { [33mSearch[39m[33m,[39m [33mFilter[39m[33m,[39m [33mArrowUpDown[39m[33m,[39m [33mChevronLeft[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mCar[39m[33m,[39m [33mUtensils[39m[33m,[39m [33mShoppingBag[39m[33m,[39m [33mRepeat[39m[33m,[39m [33mLink[39m [36mas[39m [33mLinkIcon[39m[33m,[39m [33mMoreHorizontal[39m } [36mfrom[39m [32m'lucide-react'[39m
+ [90m 7 |[39m[0m
+
+The export transactionsApi was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import transactionApi?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/history/page.tsx [Client Component Browser]
+    ./app/history/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/history/page.tsx [Client Component SSR]
+    ./app/history/page.tsx [Server Component]
+
+
+
+./app/history/page.tsx:4:1
+Export transactionsApi doesn't exist in target module
+[0m [90m 2 |[39m
+ [90m 3 |[39m [36mimport[39m { useState[33m,[39m useEffect } [36mfrom[39m [32m'react'[39m
+[31m[1m>[22m[39m[90m 4 |[39m [36mimport[39m { transactionsApi } [36mfrom[39m [32m'@/lib/api'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 5 |[39m [36mimport[39m [33mDashboardHeader[39m [36mfrom[39m [32m'@/components/dashboard/DashboardHeader'[39m
+ [90m 6 |[39m [36mimport[39m { [33mSearch[39m[33m,[39m [33mFilter[39m[33m,[39m [33mArrowUpDown[39m[33m,[39m [33mChevronLeft[39m[33m,[39m [33mChevronRight[39m[33m,[39m [33mCar[39m[33m,[39m [33mUtensils[39m[33m,[39m [33mShoppingBag[39m[33m,[39m [33mRepeat[39m[33m,[39m [33mLink[39m [36mas[39m [33mLinkIcon[39m[33m,[39m [33mMoreHorizontal[39m } [36mfrom[39m [32m'lucide-react'[39m
+ [90m 7 |[39m[0m
+
+The export transactionsApi was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import transactionApi?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/history/page.tsx [Client Component Browser]
+    ./app/history/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/history/page.tsx [Client Component SSR]
+    ./app/history/page.tsx [Server Component]
+
+
+ GET /history 500 in 14ms (compile: 5ms, render: 9ms)
+ GET / 200 in 213ms (compile: 8ms, render: 204ms)
+ GET /login 200 in 228ms (compile: 121ms, render: 107ms)
+ GET /register 200 in 277ms (compile: 169ms, render: 108ms)
+ GET /login 200 in 51ms (compile: 10ms, render: 41ms)
+ GET / 200 in 107ms (compile: 17ms, render: 91ms)
+ GET /analytics 200 in 623ms (compile: 550ms, render: 73ms)
+ GET /subscriptions 200 in 340ms (compile: 298ms, render: 42ms)
+ GET /ai-chat 200 in 405ms (compile: 305ms, render: 99ms)
+✓ Compiled in 73ms
+✓ Compiled in 22ms
+✓ Compiled in 54ms
+✓ Compiled in 26ms
+ GET / 200 in 142ms (compile: 6ms, render: 136ms)
+ GET / 200 in 125ms (compile: 9ms, render: 117ms)
+ GET /ai-chat 200 in 117ms (compile: 4ms, render: 112ms)
+ GET / 200 in 132ms (compile: 3ms, render: 130ms)
+ GET /ai-chat 200 in 118ms (compile: 14ms, render: 104ms)
+ GET / 200 in 89ms (compile: 5ms, render: 84ms)
+ GET /ai-chat 200 in 71ms (compile: 4ms, render: 67ms)
+ GET /ai-chat 200 in 56ms (compile: 3ms, render: 54ms)
+ GET / 200 in 38ms (compile: 5ms, render: 33ms)
+ GET /history 200 in 245ms (compile: 130ms, render: 115ms)
+ GET /analytics 200 in 39ms (compile: 16ms, render: 23ms)
+ GET /subscriptions 200 in 208ms (compile: 84ms, render: 124ms)
+ GET / 200 in 41ms (compile: 3ms, render: 38ms)
+ GET /subscriptions 200 in 29ms (compile: 13ms, render: 17ms)
+ GET /analytics 200 in 17ms (compile: 4ms, render: 13ms)
+ GET /history 200 in 19ms (compile: 4ms, render: 15ms)
+ GET / 200 in 14ms (compile: 4ms, render: 10ms)
+ GET /analytics 200 in 15ms (compile: 4ms, render: 11ms)
+ GET /subscriptions 200 in 16ms (compile: 5ms, render: 11ms)
+ GET / 200 in 21ms (compile: 7ms, render: 14ms)
+ GET /history 200 in 15ms (compile: 4ms, render: 11ms)
+ GET /analytics 200 in 25ms (compile: 9ms, render: 16ms)
+ GET /subscriptions 200 in 18ms (compile: 4ms, render: 14ms)
+ GET /ai-chat 200 in 20ms (compile: 5ms, render: 15ms)
+ GET /history 200 in 27ms (compile: 7ms, render: 20ms)
+ GET / 200 in 26ms (compile: 8ms, render: 18ms)
+ GET /history 200 in 38ms (compile: 13ms, render: 25ms)
+ GET /login 200 in 46ms (compile: 7ms, render: 39ms)
+ GET /login 200 in 57ms (compile: 5ms, render: 52ms)
+ GET /analytics 200 in 29ms (compile: 10ms, render: 18ms)
+ GET /login 200 in 93ms (compile: 3ms, render: 90ms)
+ GET /subscriptions 200 in 26ms (compile: 9ms, render: 17ms)
+ GET /login 200 in 24ms (compile: 2ms, render: 22ms)
+ GET /login 200 in 23ms (compile: 1076µs, render: 22ms)
+ GET /ai-chat 200 in 24ms (compile: 9ms, render: 16ms)
+ GET /subscriptions 200 in 6ms (compile: 1000µs, render: 5ms)
+ GET /login 200 in 24ms (compile: 1302µs, render: 23ms)
+ GET /login 200 in 20ms (compile: 930µs, render: 19ms)
+ GET /analytics 200 in 10ms (compile: 3ms, render: 7ms)
+ GET /login 200 in 27ms (compile: 3ms, render: 25ms)
+ GET /login 200 in 23ms (compile: 3ms, render: 21ms)
+ GET /history 200 in 25ms (compile: 7ms, render: 18ms)
+ GET /login 200 in 23ms (compile: 1438µs, render: 22ms)
+ GET /login 200 in 22ms (compile: 1174µs, render: 20ms)
+ GET / 200 in 22ms (compile: 6ms, render: 16ms)
+ GET /login 200 in 23ms (compile: 5ms, render: 17ms)
+ GET /login 200 in 9ms (compile: 1116µs, render: 8ms)
+ GET / 200 in 17ms (compile: 3ms, render: 14ms)
+ GET /login 200 in 26ms (compile: 1752µs, render: 24ms)
+ GET /login 200 in 13ms (compile: 1964µs, render: 11ms)
+ GET /history 200 in 23ms (compile: 6ms, render: 17ms)
+ GET /login 200 in 36ms (compile: 1414µs, render: 35ms)
+ GET /login 200 in 40ms (compile: 3ms, render: 37ms)
+ GET /ai-chat 200 in 24ms (compile: 7ms, render: 17ms)
+ GET /subscriptions 200 in 22ms (compile: 5ms, render: 16ms)
+ GET /login 200 in 33ms (compile: 1738µs, render: 32ms)
+ GET / 200 in 18ms (compile: 5ms, render: 14ms)
+ GET /login 200 in 38ms (compile: 1692µs, render: 36ms)
+ GET /login 200 in 33ms (compile: 1424µs, render: 32ms)
+ GET / 200 in 6ms (compile: 1179µs, render: 5ms)
+ GET /history 200 in 25ms (compile: 8ms, render: 17ms)
+ GET /analytics 200 in 16ms (compile: 4ms, render: 12ms)
+ GET /subscriptions 200 in 18ms (compile: 4ms, render: 14ms)
+ GET /ai-chat 200 in 16ms (compile: 4ms, render: 12ms)
+ GET /login 200 in 25ms (compile: 7ms, render: 17ms)
+✓ Compiled in 70ms
+✓ Compiled in 182ms
+✓ Compiled in 74ms
+✓ Compiled in 121ms
+✓ Compiled in 52ms
+⨯ ./app/page.tsx:5:1
+Export transactionApi doesn't exist in target module
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useState } [36mfrom[39m [32m'react'[39m
+ [90m 4 |[39m [36mimport[39m { useRouter } [36mfrom[39m [32m'next/navigation'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { analyticsApi[33m,[39m transactionApi [36mas[39m transactionsApi } [36mfrom[39m [32m'@/lib/api'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m {
+ [90m 7 |[39m   [33mPieChart[39m[33m,[39m [33mPie[39m[33m,[39m [33mCell[39m[33m,[39m [33mBarChart[39m[33m,[39m [33mBar[39m[33m,[39m [33mLineChart[39m[33m,[39m [33mLine[39m[33m,[39m [33mXAxis[39m[33m,[39m [33mYAxis[39m[33m,[39m [33mTooltip[39m[33m,[39m [33mResponsiveContainer[39m[33m,[39m [33mCartesianGrid[39m
+ [90m 8 |[39m } [36mfrom[39m [32m'recharts'[39m[0m
+
+The export transactionApi was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import transactionsApi?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./app/page.tsx:5:1
+Export transactionApi doesn't exist in target module
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useState } [36mfrom[39m [32m'react'[39m
+ [90m 4 |[39m [36mimport[39m { useRouter } [36mfrom[39m [32m'next/navigation'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { analyticsApi[33m,[39m transactionApi [36mas[39m transactionsApi } [36mfrom[39m [32m'@/lib/api'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m {
+ [90m 7 |[39m   [33mPieChart[39m[33m,[39m [33mPie[39m[33m,[39m [33mCell[39m[33m,[39m [33mBarChart[39m[33m,[39m [33mBar[39m[33m,[39m [33mLineChart[39m[33m,[39m [33mLine[39m[33m,[39m [33mXAxis[39m[33m,[39m [33mYAxis[39m[33m,[39m [33mTooltip[39m[33m,[39m [33mResponsiveContainer[39m[33m,[39m [33mCartesianGrid[39m
+ [90m 8 |[39m } [36mfrom[39m [32m'recharts'[39m[0m
+
+The export transactionApi was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import transactionsApi?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+ GET / 500 in 190ms (compile: 171ms, render: 19ms)
+⨯ ./app/page.tsx:5:1
+Export transactionApi doesn't exist in target module
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useState } [36mfrom[39m [32m'react'[39m
+ [90m 4 |[39m [36mimport[39m { useRouter } [36mfrom[39m [32m'next/navigation'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { analyticsApi[33m,[39m transactionApi [36mas[39m transactionsApi } [36mfrom[39m [32m'@/lib/api'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m {
+ [90m 7 |[39m   [33mPieChart[39m[33m,[39m [33mPie[39m[33m,[39m [33mCell[39m[33m,[39m [33mBarChart[39m[33m,[39m [33mBar[39m[33m,[39m [33mLineChart[39m[33m,[39m [33mLine[39m[33m,[39m [33mXAxis[39m[33m,[39m [33mYAxis[39m[33m,[39m [33mTooltip[39m[33m,[39m [33mResponsiveContainer[39m[33m,[39m [33mCartesianGrid[39m
+ [90m 8 |[39m } [36mfrom[39m [32m'recharts'[39m[0m
+
+The export transactionApi was not found in module [project]/lib/api.ts [app-client] (ecmascript).
+Did you mean to import transactionsApi?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+
+./app/page.tsx:5:1
+Export transactionApi doesn't exist in target module
+[0m [90m 3 |[39m [36mimport[39m { useEffect[33m,[39m useState } [36mfrom[39m [32m'react'[39m
+ [90m 4 |[39m [36mimport[39m { useRouter } [36mfrom[39m [32m'next/navigation'[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { analyticsApi[33m,[39m transactionApi [36mas[39m transactionsApi } [36mfrom[39m [32m'@/lib/api'[39m
+ [90m   |[39m [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m {
+ [90m 7 |[39m   [33mPieChart[39m[33m,[39m [33mPie[39m[33m,[39m [33mCell[39m[33m,[39m [33mBarChart[39m[33m,[39m [33mBar[39m[33m,[39m [33mLineChart[39m[33m,[39m [33mLine[39m[33m,[39m [33mXAxis[39m[33m,[39m [33mYAxis[39m[33m,[39m [33mTooltip[39m[33m,[39m [33mResponsiveContainer[39m[33m,[39m [33mCartesianGrid[39m
+ [90m 8 |[39m } [36mfrom[39m [32m'recharts'[39m[0m
+
+The export transactionApi was not found in module [project]/lib/api.ts [app-ssr] (ecmascript).
+Did you mean to import transactionsApi?
+All exports of the module are statically known (It doesn't have dynamic exports). So it's known statically that the requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./app/page.tsx [Client Component Browser]
+    ./app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/page.tsx [Client Component SSR]
+    ./app/page.tsx [Server Component]
+
+
+ GET / 500 in 86ms (compile: 35ms, render: 51ms)
+ GET /login 200 in 215ms (compile: 90ms, render: 125ms)

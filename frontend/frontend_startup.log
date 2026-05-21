@@ -1,0 +1,34 @@
+
+> frontend@0.1.0 dev
+> next dev
+
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.20.10.2:3000
+
+✓ Starting...
+✓ Ready in 724ms
+ GET /ai-chat 200 in 354ms (compile: 262ms, render: 92ms)
+ GET /login 200 in 78ms (compile: 50ms, render: 28ms)
+ GET / 200 in 109ms (compile: 26ms, render: 84ms)
+ GET /login 200 in 14ms (compile: 1340µs, render: 13ms)
+ GET / 200 in 92ms (compile: 9ms, render: 83ms)
+ GET /login 200 in 16ms (compile: 3ms, render: 13ms)
+ GET /login 200 in 45ms (compile: 5ms, render: 40ms)
+ GET /register 200 in 52ms (compile: 39ms, render: 13ms)
+ GET / 200 in 20ms (compile: 6ms, render: 13ms)
+ GET /login 200 in 27ms (compile: 5ms, render: 22ms)
+ GET /login 200 in 16ms (compile: 1717µs, render: 14ms)
+ GET /analytics 200 in 111ms (compile: 50ms, render: 60ms)
+ GET /login 200 in 35ms (compile: 4ms, render: 32ms)
+ GET /register 200 in 25ms (compile: 9ms, render: 15ms)
+ GET /login?registered=true 200 in 17ms (compile: 5ms, render: 12ms)
+ GET / 200 in 34ms (compile: 10ms, render: 23ms)
+ GET /dashboard 404 in 251ms (compile: 192ms, render: 59ms)
+ GET / 200 in 56ms (compile: 5ms, render: 51ms)
+ GET / 200 in 19ms (compile: 5ms, render: 14ms)
+ GET / 200 in 11ms (compile: 4ms, render: 7ms)
+ GET /history 200 in 39ms (compile: 30ms, render: 8ms)
+ GET /analytics 200 in 9ms (compile: 3ms, render: 6ms)
+ GET /ai-chat 200 in 16ms (compile: 3ms, render: 13ms)
+ GET /subscriptions 200 in 25ms (compile: 18ms, render: 7ms)
