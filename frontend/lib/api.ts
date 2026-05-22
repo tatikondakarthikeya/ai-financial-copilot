@@ -87,6 +87,19 @@ export const setuApi = {
     api.post(`/setu/fetch-data/${consentId}`),
 };
 
+export const receiptApi = {
+  scan: (file: File) => {
+    const fd = new FormData();
+    fd.append('file', file);
+    return api.post('/receipts/scan', fd);
+  },
+  scanAndSave: (file: File) => {
+    const fd = new FormData();
+    fd.append('file', file);
+    return api.post('/receipts/scan-and-save', fd).then(r => { clearCache(); return r; });
+  },
+};
+
 export const budgetApi = {
   getAll: () => api.get('/budgets/'),
   getStatus: () => api.get('/budgets/status'),

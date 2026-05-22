@@ -12,6 +12,7 @@ import CategoryBreakdown from '@/components/dashboard/CategoryBreakdown'
 import RecentTransactions from '@/components/dashboard/RecentTransactions'
 import GmailIntegration from '@/components/dashboard/GmailIntegration'
 import HealthScoreCard from '@/components/dashboard/HealthScoreCard'
+import ReceiptScanner from '@/components/dashboard/ReceiptScanner'
 import BankStatementUpload from '@/components/dashboard/BankStatementUpload'
 import PlaidLinkBank from '@/components/dashboard/PlaidLinkBank'
 
@@ -46,7 +47,7 @@ export default function Dashboard() {
   useEffect(() => {
     const token = localStorage.getItem('token')
     if (!token) {
-      router.push('/login')
+      router.push('/landing')
       return
     }
     loadData()
@@ -195,6 +196,8 @@ export default function Dashboard() {
           <PlaidLinkBank onLinkSuccess={loadData} />
 
           <BankStatementUpload onUploadSuccess={loadData} />
+
+          <ReceiptScanner onScanSuccess={loadData} />
 
           <GmailIntegration onSyncSuccess={loadData} />
 
