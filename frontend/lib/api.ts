@@ -43,19 +43,19 @@ export const authApi = {
 };
 
 export const transactionsApi = {
-  getTransactions: () => api.get('/transactions/'),
-  addTransaction: (data: any) => api.post('/transactions/add', data),
+  getTransactions: () => cached('txns', () => api.get('/transactions/'), 15000),
+  addTransaction: (data: any) => api.post('/transactions/add', data).then(r => { clearCache(); return r; }),
   uploadCSV: (file: File) => {
     const formData = new FormData();
     formData.append('file', file);
     return api.post('/transactions/upload', formData);
   },
-  syncGmail: () => api.post('/transactions/sync-gmail'),
-  deleteTransaction: (id: number) => api.delete(`/transactions/${id}`),
+  syncGmail: () => api.post('/transactions/sync-gmail').then(r => { clearCache(); return r; }),
+  deleteTransaction: (id: number) => api.delete(`/transactions/${id}`).then(r => { clearCache(); return r; }),
   uploadBankStatement: (file: File) => {
     const formData = new FormData();
     formData.append('file', file);
-    return api.post('/transactions/upload-bank-statement', formData);
+    return api.post('/transactions/upload-bank-statement', formData).then(r => { clearCache(); return r; });
   },
 };
 
@@ -87,8 +87,35 @@ export const setuApi = {
     api.post(`/setu/fetch-data/${consentId}`),
 };
 
+export const budgetApi = {
+  getAll: () => api.get('/budgets/'),
+  getStatus: () => api.get('/budgets/status'),
+  create: (data: { category: string; amount_limit: number; period?: string }) =>
+    api.post('/budgets/', data),
+  update: (id: number, data: { amount_limit?: number; is_active?: boolean }) =>
+    api.patch(`/budgets/${id}`, data),
+  delete: (id: number) => api.delete(`/budgets/${id}`),
+};
+
+// Simple in-memory cache to avoid duplicate API calls
+const _cache: Record<string, { data: any; ts: number }> = {};
+function cached(key: string, fetcher: () => Promise<any>, ttlMs = 30000) {
+  const now = Date.now();
+  if (_cache[key] && now - _cache[key].ts < ttlMs) {
+    return Promise.resolve(_cache[key].data);
+  }
+  return fetcher().then(res => {
+    _cache[key] = { data: res, ts: now };
+    return res;
+  });
+}
+export function clearCache() { Object.keys(_cache).forEach(k => delete _cache[k]); }
+
 export const analyticsApi = {
-  getSummary: () => api.get('/analytics/summary'),
-  getInsights: () => api.get('/analytics/insights'),
-  getSubscriptions: () => api.get('/analytics/subscriptions'),
+  getSummary: () => cached('summary', () => api.get('/analytics/summary')),
+  getInsights: () => cached('insights', () => api.get('/analytics/insights')),
+  getSubscriptions: () => cached('subs', () => api.get('/analytics/subscriptions')),
+  getHealthScore: () => cached('health', () => api.get('/analytics/health-score')),
+  getPredictions: () => cached('predictions', () => api.get('/analytics/predictions')),
+  getWeeklyDigest: () => cached('digest', () => api.get('/analytics/weekly-digest')),
 };

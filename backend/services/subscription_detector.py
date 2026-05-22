@@ -1,51 +1,104 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 from models import models
-import pandas as pd
 from datetime import datetime, timedelta
 
-def detect_subscriptions(db: Session, user_id: int):
+
+def detect_subscriptions(db: Session, user_id: int) -> list:
     """
-    Detects recurring transactions occurring every ~30 days with similar amounts.
+    Detects recurring transactions with frequency analysis and cancellation insights.
     """
-    # Fetch user transactions
-    transactions = db.query(models.Transaction).filter(models.Transaction.user_id == user_id).all()
+    transactions = (
+        db.query(models.Transaction)
+        .filter(
+            models.Transaction.user_id == user_id,
+            models.Transaction.type == "expense",
+            models.Transaction.is_duplicate == False,
+        )
+        .order_by(models.Transaction.date.asc())
+        .all()
+    )
     if not transactions:
         return []
-        
-    df = pd.DataFrame([{
-        'merchant': t.merchant,
-        'amount': t.amount,
-        'date': t.date
-    } for t in transactions])
-    
-    df['date'] = pd.to_datetime(df['date'])
-    df = df.sort_values(by=['merchant', 'date'])
-    
+
+    # Group by merchant
+    merchants = {}
+    for t in transactions:
+        merchants.setdefault(t.merchant, []).append(t)
+
     subscriptions = []
-    
-    for merchant, group_raw in df.groupby('merchant'):
-        if len(group_raw) < 2:
+    now = datetime.now().date()
+
+    for merchant, txs in merchants.items():
+        if len(txs) < 2:
             continue
-            
-        group = group_raw.copy()
-        # Calculate day differences between consecutive entries
-        group['diff'] = group['date'].diff().dt.days
-        
-        # Calculate amount differences
-        avg_amount = group['amount'].mean()
-        amount_std = group['amount'].std()
-        
-        # Check if intervals are around 30 days (25-35 range) and amounts are stable
-        recurring_intervals = group['diff'].dropna()
-        is_monthly = any(25 <= d <= 35 for d in recurring_intervals)
-        is_stable_amount = amount_std / avg_amount < 0.1 if avg_amount > 0 else True
-        
-        if is_monthly and is_stable_amount:
-            subscriptions.append({
-                "merchant": merchant,
-                "amount": float(avg_amount),
-                "frequency": "Monthly"
-            })
-            
+
+        amounts = [t.amount for t in txs]
+        dates = sorted([t.date for t in txs])
+
+        # Calculate intervals
+        intervals = [(dates[i + 1] - dates[i]).days for i in range(len(dates) - 1)]
+        if not intervals:
+            continue
+
+        avg_interval = sum(intervals) / len(intervals)
+        avg_amount = sum(amounts) / len(amounts)
+        amount_std = (sum((a - avg_amount) ** 2 for a in amounts) / len(amounts)) ** 0.5
+
+        # Determine frequency
+        frequency = None
+        if 5 <= avg_interval <= 10:
+            frequency = "Weekly"
+        elif 25 <= avg_interval <= 35:
+            frequency = "Monthly"
+        elif 80 <= avg_interval <= 100:
+            frequency = "Quarterly"
+        elif 350 <= avg_interval <= 380:
+            frequency = "Yearly"
+
+        if not frequency:
+            continue
+
+        # Check amount stability (within 10% variance)
+        is_stable = (amount_std / avg_amount < 0.15) if avg_amount > 0 else True
+        if not is_stable:
+            continue
+
+        # Calculate next expected charge
+        last_date = dates[-1]
+        if frequency == "Weekly":
+            next_date = last_date + timedelta(days=7)
+        elif frequency == "Monthly":
+            next_date = last_date + timedelta(days=30)
+        elif frequency == "Quarterly":
+            next_date = last_date + timedelta(days=90)
+        else:
+            next_date = last_date + timedelta(days=365)
+
+        # Days since last charge
+        days_since = (now - last_date).days
+
+        # Status
+        if frequency == "Monthly" and days_since > 45:
+            status = "possibly_cancelled"
+        elif frequency == "Weekly" and days_since > 14:
+            status = "possibly_cancelled"
+        else:
+            status = "active"
+
+        subscriptions.append({
+            "merchant": merchant,
+            "amount": round(float(avg_amount), 2),
+            "frequency": frequency,
+            "last_charge": last_date.isoformat(),
+            "next_expected": next_date.isoformat(),
+            "charge_count": len(txs),
+            "total_spent": round(sum(amounts), 2),
+            "days_since_last": days_since,
+            "status": status,
+            "category": txs[-1].category or "General",
+        })
+
+    # Sort: active first, then by amount desc
+    subscriptions.sort(key=lambda x: (x["status"] != "active", -x["amount"]))
     return subscriptions

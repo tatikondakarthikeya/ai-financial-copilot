@@ -18,7 +18,7 @@ _client = None
 if GROQ_API_KEY:
     _client = Groq(api_key=GROQ_API_KEY)
 
-MODEL = "llama-3.3-70b-versatile"
+MODEL = "llama-3.1-8b-instant"
 
 EXTRACTION_PROMPT = """You are a financial email parser for Indian bank and payment emails.
 
@@ -117,10 +117,10 @@ def _normalize_result(data: dict) -> dict:
         data["direction"] = "credit"
 
     # Clean merchant name
+    import re
     merchant = data.get("merchant", "")
     if merchant:
         merchant = merchant.replace("*", " ").strip()
-        # Remove trailing order IDs
         for sep in ["ORDER", "TXN", "REF", "#"]:
             if sep in merchant.upper():
                 merchant = merchant[:merchant.upper().index(sep)].strip()

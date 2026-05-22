@@ -1,27 +1,48 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname, useRouter } from 'next/navigation'
-import { 
-  Home, 
-  History, 
-  LineChart, 
-  Repeat, 
-  MessageSquare, 
-  LogOut, 
+import {
+  Home,
+  History,
+  LineChart,
+  Repeat,
+  MessageSquare,
+  LogOut,
   Settings,
-  Bell
+  Bell,
+  Target,
+  Moon,
+  Sun
 } from 'lucide-react'
 
 export default function Sidebar() {
   const pathname = usePathname()
   const router = useRouter()
+  const [dark, setDark] = useState(false)
+
+  useEffect(() => {
+    const saved = localStorage.getItem('theme')
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      setDark(true)
+      document.documentElement.classList.add('dark')
+    }
+  }, [])
+
+  const toggleDark = () => {
+    const next = !dark
+    setDark(next)
+    document.documentElement.classList.toggle('dark', next)
+    localStorage.setItem('theme', next ? 'dark' : 'light')
+  }
 
   const navItems = [
     { label: 'Home', href: '/', icon: Home },
     { label: 'History', href: '/history', icon: History },
     { label: 'Analytics', href: '/analytics', icon: LineChart },
     { label: 'Subscriptions', href: '/subscriptions', icon: Repeat },
+    { label: 'Budgets', href: '/budgets', icon: Target },
     { label: 'AI Chat', href: '/ai-chat', icon: MessageSquare },
   ]
 
@@ -64,9 +85,9 @@ export default function Sidebar() {
       </nav>
 
       <div className="pt-6 border-t border-slate-50 space-y-2">
-        <button className="w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl text-slate-500 hover:bg-slate-50 hover:text-indigo-600 transition-all font-semibold text-[15px]">
-          <Settings size={20} className="text-slate-400" />
-          <span>Settings</span>
+        <button onClick={toggleDark} className="w-full flex items-center gap-3 px-4 py-3.5 rounded-2xl text-slate-500 hover:bg-slate-50 hover:text-indigo-600 transition-all font-semibold text-[15px]">
+          {dark ? <Sun size={20} className="text-amber-400" /> : <Moon size={20} className="text-slate-400" />}
+          <span>{dark ? 'Light Mode' : 'Dark Mode'}</span>
         </button>
         <button 
           onClick={handleLogout}

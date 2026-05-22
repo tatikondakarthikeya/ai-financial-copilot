@@ -11,6 +11,7 @@ import SpendingTrend from '@/components/dashboard/SpendingTrend'
 import CategoryBreakdown from '@/components/dashboard/CategoryBreakdown'
 import RecentTransactions from '@/components/dashboard/RecentTransactions'
 import GmailIntegration from '@/components/dashboard/GmailIntegration'
+import HealthScoreCard from '@/components/dashboard/HealthScoreCard'
 import BankStatementUpload from '@/components/dashboard/BankStatementUpload'
 import PlaidLinkBank from '@/components/dashboard/PlaidLinkBank'
 
@@ -168,9 +169,7 @@ export default function Dashboard() {
           changePct={summary?.change_percentage}
           lastMonthTotal={summary?.last_month_total || 0}
         />
-        <AIInsightCard
-          insight={insights?.messages?.[0] || "You're doing great with your spending!"}
-        />
+        <HealthScoreCard />
       </div>
 
       {/* CHARTS */}
