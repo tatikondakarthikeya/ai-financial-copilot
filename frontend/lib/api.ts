@@ -72,6 +72,12 @@ export const aiApi = {
   query: (query: string) => api.post('/ai/query', { query }),
 };
 
+export const plaidApi = {
+  createLinkToken: () => api.post('/plaid/create-link-token'),
+  exchangeToken: (public_token: string) =>
+    api.post('/plaid/exchange-token', { public_token }),
+};
+
 export const setuApi = {
   createConsent: (mobile_number: string) =>
     api.post('/setu/create-consent', { mobile_number }),

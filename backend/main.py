@@ -4,7 +4,7 @@ from starlette.middleware.sessions import SessionMiddleware
 import os
 from dotenv import load_dotenv
 
-from routers import auth, transactions, analytics, ai, sms, google_auth, setu
+from routers import auth, transactions, analytics, ai, sms, google_auth, setu, plaid_routes
 from database import engine
 from models import models
 
@@ -47,6 +47,7 @@ app.include_router(ai.router)
 app.include_router(sms.router)
 app.include_router(google_auth.router)
 app.include_router(setu.router)
+app.include_router(plaid_routes.router)
 
 
 @app.get("/")
